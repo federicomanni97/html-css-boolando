@@ -12,22 +12,23 @@
 }
 
 .container{
-    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .debug{
     border: 1px solid black;
 }
 
-img{
+ #logo > img{
     width: 20%;
-
+    min-width: 20%;
 }
 
 header{
     background-color: var(--color-header);
     padding: 15px 10px;
     color: var(--color-primary);
+    text-align: center;
 }
 
 .d-flex{
@@ -44,4 +45,29 @@ ul{
 
 li{
     padding: 0px 5px;
+}
+
+main{
+    margin: 0 auto;
+}
+
+.card{
+    width: calc(100% / 3);
+}
+
+.relative{
+    position: relative;
+}
+
+.heart{
+    font-size: 30px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    padding: 15px;
+}
+
+img{
+    display: block;
 }

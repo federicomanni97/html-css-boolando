@@ -2,24 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
 :root{
     --color-header: #FF6900;
     --color-footer: #1A1A1A;
     --color-primary: #FFFFFF;
-
+    --color-discount: #FF0000;
+    --color-sostenibility: #008000;
 }
 
 .container{
     max-width: 1200px;
 }
 
-.debug{
-    border: 1px solid black;
-}
-
- #logo > img{
+#logo > img{
     width: 20%;
     min-width: 20%;
 }
@@ -29,6 +27,12 @@ header{
     padding: 15px 10px;
     color: var(--color-primary);
     text-align: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .d-flex{
@@ -49,14 +53,7 @@ li{
 
 main{
     margin: 0 auto;
-}
-
-.card{
-    width: calc(100% / 3);
-}
-
-.relative{
-    position: relative;
+    margin-top: 60px;
 }
 
 .heart{
@@ -65,9 +62,108 @@ main{
     position: absolute;
     top: 10px;
     right: 0px;
-    padding: 15px;
+    padding: 0px 10px;
+}
+
+.heart:hover{
+    color: var(--color-discount);
 }
 
 img{
     display: block;
+    width: 100%;
+}
+ 
+.c-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.card{
+    width: calc(100% / 3 - 40px);
+    min-width: 350px;
+    margin: 30px 10px;
+    
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
+.relative{
+    position: relative;
+}
+
+.photo2{
+    display: none;
+}
+
+.card:hover img.photo2{
+    display: block;
+}
+
+.card:hover img.photo1{
+    display: none;
+}
+
+.discount{
+    background-color: var(--color-discount);
+    color: var(--color-primary);
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    padding: 5px;
+}
+
+.sostenibility{
+    background-color: var(--color-sostenibility);
+    color: var(--color-primary);
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    padding: 5px;
+}
+
+.sostenibility2{
+    background-color: var(--color-sostenibility);
+    color: var(--color-primary);
+    font-size: 15px;
+    position: absolute;
+    left: 45px;
+    bottom: 100px;
+    padding: 5px;
+}
+
+.price{
+    color: var(--color-discount);
+    font-weight: bold;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: var(--color-footer);
+}
+
+footer{
+    background-color: var(--color-footer);
+    color: var(--color-primary);
+    padding: 40px 100px;
+    
+}
+
+.flexstart{
+    justify-content: flex-start;
+    
+}
+
+h2{
+   padding: 20px 0px;  
+}
+
+.leftside-footer{
+    width: 20%;
 }
